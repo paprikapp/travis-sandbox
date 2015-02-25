@@ -14,3 +14,4 @@ script:
 after_success:
     - echo "${TRAVIS_TAG}"
     - echo "${TRAVIS_BRANCH}"
+    

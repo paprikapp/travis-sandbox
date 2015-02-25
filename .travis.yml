@@ -14,4 +14,4 @@ script:
 after_success:
     - echo "${TRAVIS_TAG}"
     - echo "${TRAVIS_BRANCH}"
-    
+    - if [ "${TRAVIS_TAG}" -ne null ]; then echo "it is a tag" else echo "it is not tag" fi

@@ -9,13 +9,8 @@ android:
         - 'android-sdk-license-.+'
 before_script:
     - chmod +x ./gradlew
+    - chomd +x ./test.sh
 script:
     - ./gradlew build
 after_success:
-    - echo "${TRAVIS_TAG}"
-    - echo "${TRAVIS_BRANCH}"
-    - if [ !"${TRAVIS_TAG}" ]; then
-    - echo "it is not a tag"
-    - else
-    - echo "it is a tag"
-    - fi
+    - ./test.sh
